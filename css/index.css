@@ -1,0 +1,43 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Mochiy+Pop+P+One&family=Monoton&family=Play&family=Righteous&display=swap');
+/* font-family: 'Lora', serif; */
+* {margin:0; padding:0; box-sizing:border-box}
+.cf::after { content:''; display:block; clear:both}
+img { max-width:100%; vertical-align:middle;}
+ul { list-style:none }
+a { color:inherit; text-decoration:none}
+.blind {
+    position:absolute; width:1px; height:1px;
+    overflow:hidden; text-indent:-9999px;
+    font-size:0px; line-height:0px;
+}
+.row{max-width: 1600px; margin:0 auto; padding:0 10px }
+
+/* 헤더부분 */
+
+#header { height:50px; background:#ffad9f; position:relative}
+#header .search { position:absolute; right:10%; top:25%}
+#header .search #sbox { 
+    border-radius: 8px; background:#ffd7cd; border:none;
+    text-indent:1em; overflow:hidden; outline:none;
+    height:18px; width:150px;
+    }
+#header .search label {position:absolute; right:3px; top:2px; color:#b6635d; font-size:14px;}
+
+#main { height:94.7vh; background:#6667ab;}
+#main .nav { height: 30vh;}
+#main .nav .depthcover1 { display:flex; padding-top:20px; justify-content: center;}
+#main .nav .depthcover1 img { width:25vh; transform: scaleY(-1);}
+#main .nav .depthcover2 { display:flex; padding-top:5px; justify-content: center;}
+#main .nav .depthcover2 img { width:25vh; }
+#main .nav .depth { display:flex; justify-content:space-evenly;}
+#main .nav .depth li{font-size:2vw; color:#fff; font-family: 'Lora', serif;}
+
+
+#main .me { height:60%; width:70%;border:6px solid #fff;position:relative; top:0; left:50%;transform:translateX(-50%); display:flex; flex-direction: column; justify-content: space-evenly;}
+#main .me > div { padding-left:2vw;}
+#main .me h2 {color:#fff; font-size:3.5vh;font-family: 'Lora', serif;} 
+#main .me h1 {color:#ffad9f; font-size:15vh;font-family: 'Lora', serif;}
+#main .me div:nth-child(1){ display:flex; justify-content:flex-end; padding-right:3vw;}
+/* #main .me div:nth-child(2){ display:flex;justify-content: center; align-items: center;} */
+/* #main .me div:nth-child(3){ display:flex;justify-content: end; padding-right:4vw} */
