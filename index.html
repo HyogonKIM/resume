@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+    <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet" href="./css/index.css">
     <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery.easypiechart.js"></script>
+    <script src="./js/jquery.mousewheel.min.js"></script>
 </head>
 <body>
     <div id="header">
@@ -18,10 +21,11 @@
         </div>
     </div>
     
-    <div id="main">
-        <div class="nav row">
+    <div id="wrap">
+        <div id="nav">
             <div class="depthcover1">
                 <a href="#"><img src="./img/depthcover2.png" alt=""></a>
+                
             </div>
             <ul class="depth">
                 <li><a href="#">Intro</a></li>
@@ -34,11 +38,138 @@
                 <a href="#"><img src="./img/depthcover2.png" alt=""></a>
             </div>
         </div>
-        <div class="me">
-            <div><h1>HYO GON</h1></div>
-            <div><h2>010-5013-3962</h2></div>
-            <div><h2>khk9312@naver.com</h2></div>
-        </div>
+        <section id="sect1" class="on">
+            <div id="intro">
+                
+                
+                <div class="me box">
+                    <div><h1>HYO GON</h1></div>
+                    <div><h2>010-5013-3962</h2></div>
+                    <div><h2>khk9312@naver.com</h2></div>
+                </div>
+            </div>
+        </section>
+        <section id="sect2">
+            <div id="aboutme">
+                <div class="about box">
+                    <img src="./img/man.svg" alt="profile">
+                    <ul class="depth1 profile">
+                        <li>PROFILE
+                            <ul class="depth2">
+                                <li>이름</li>
+                                <li>김효곤</li>
+                                <li>생년월일</li>
+                                <li>1993.09.14</li>
+                                <li>학력</li>
+                                <li>경기대학교 무역학과 졸업</li>
+                                <li>이메일</li>
+                                <li>khk9312@naver.com</li>
+                                <li>전화번호</li>
+                                <li>010-5013-3962</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="depth1 timeline">
+                        <li>TIMELINE
+                            <ul class="depth2">
+                                <li>2015년 3월</li>
+                                <li>만기 전역</li>
+                                <li>2019년 2월</li>
+                                <li>대학교 졸업</li>
+                                <li>2019년 4월</li>
+                                <li>공기업 인턴</li>
+                                <li>2020년 5월</li>
+                                <li>딜리버리히어로코리아 입사</li>
+                                <li>2021년 12월</li>
+                                <li>그린컴퓨터아카데미 수강</li>
+    
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="sect3">
+            <div id="Skills">
+                <div class="skill box">
+                    <div class="container">
+                        <p class="tit">HTML5</p>
+                        <div class="skills html" data-percent="90"><span class="pBox"><span class="percent"></span><span>%</span></span></div>
+                    </div>
+        
+                    <div class="container">
+                        <p class="tit">CSS3</p>
+                        <div class="skills css" data-percent="80"><span class="pBox"><span class="percent"></span><span>%</span></span></div>
+                    </div>
+        
+                    <div class="container">
+                        <p class="tit">JavaScript</p>
+                        <div class="skills js" data-percent="70"><span class="pBox"><span class="percent"></span><span>%</span></span></div>
+                    </div>
+        
+                    <div class="container">
+                        <p class="tit">jQuery</p>
+                        <div class="skills photo" data-percent="60"><span class="pBox"><span class="percent"></span><span>%</span></span></div>
+                    </div>
+        
+                </div>
+            </div>
+        </section>
+        <section id="sect4">
+            <div id="portfolio">
+                <div class="result box">
+                    <div class="category">
+                        <a href="*">All</a>
+                        <a href=".rwd">반응형웹</a>
+                        <a href=".react">React</a>
+                    </div>
+                    <ul class="grid">
+                        <li class="item rwd"><a href="https://oktobat.github.io/coco220114/" title="포트폴리오 0"><img src="./img/bg1.jpg" alt="이미지1"></a></li>
+                        <li class="item react"><a href="http://www.daum.net" title="포트폴리오 1"><img src="./img/bg2.jpg" alt="이미지2"></a></li>
+                        <li class="item rwd"><a href="http://google.com" title="포트폴리오 2"><img src="./img/bg3.jpg" alt="이미지3"></a></li>
+                        <li class="item react"><a href="http://www.naver.com" title="포트폴리오 3"><img src="./img/bg4.jpg" alt="이미지4"></a></li>
+                        <li class="item rwd"><a href="http://www.daum.net" title="포트폴리오 4"><img src="./img/bg1.jpg" alt="이미지5"></a></li>
+                        <li class="item react"><a href="http://google.com" title="포트폴리오 5"><img src="./img/bg2.jpg" alt="이미지6"></a></li>
+                        <li class="item rwd"><a href="http://www.naver.com" title="포트폴리오 6"><img src="./img/bg3.jpg" alt="이미지7"></a></li>
+                        <li class="item react"><a href="http://www.daum.net" title="포트폴리오 7"><img src="./img/bg4.jpg" alt="이미지8"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="sect5">
+            <div id="contact">
+                    <form action="#" method="post" name="contact" class="form1">
+                        <table class="contact">
+                            <colgroup>
+                                <col class="col1">
+                                <col class="col2">
+                            </colgroup>
+                            <tr>
+                                <th scope="row"><label for="irum">* 이름</label></th>
+                                <td><input type="text" id="irum" name="irum" placeholder="Name"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="email">* 이메일</label></th>
+                                <td><input type="email" id="email" placeholder="E-mail" name="email"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="phone">연락처</label></th>
+                                <td><input type="text" id="phone" name="phone" placeholder="Phone(-생략)"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="memo"><label for="memo">* 메모</label></th>
+                                <td><textarea name="memo" id="memo" placeholder="200자 이내로 작성해주세요" maxlength="200"></textarea></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="info"><label>개인정보수집</label></th>
+                                <td><div id="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil rerum itaque ea expedita dolore quae aspernatur beatae commodi dolores excepturi, deleniti. Ea aliquam similique rem id commodi? Aspernatur, sit, odit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi blanditiis quos voluptatem nesciunt inventore officia facilis vel, fugit exercitationem aut. Ullam ex, maiores consectetur reprehenderit quia, facilis ea voluptatum natus.</div></td>
+                            </tr>
+                        </table>
+                        <p><input type="checkbox" id="ok"><label for="ok">개인정보 수집 및 이용에 동의합니다.</label></p>
+                        <p><button type="submit">submit</button></p>
+                    </form>
+            </div>
+        </section>
     </div>
     <script src="./js/index.js"></script>
 </body>

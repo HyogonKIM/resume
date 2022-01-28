@@ -1,6 +1,8 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Mochiy+Pop+P+One&family=Monoton&family=Play&family=Righteous&display=swap');
 /* font-family: 'Lora', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Lora:wght@500&family=Mochiy+Pop+P+One&family=Monoton&family=Play&family=Righteous&display=swap');
+/* font-family: 'Dongle', sans-serif; */
 * {margin:0; padding:0; box-sizing:border-box}
 .cf::after { content:''; display:block; clear:both}
 img { max-width:100%; vertical-align:middle;}
@@ -13,9 +15,11 @@ a { color:inherit; text-decoration:none}
 }
 .row{max-width: 1600px; margin:0 auto; padding:0 10px }
 
-/* 헤더부분 */
 
-#header { height:50px; background:#ffad9f; position:relative}
+html{overflow:hidden}
+.box { height:60%; width:70%;border:6px solid #fff;position:relative; top:30vh; left:50%;transform:translateX(-50%);}
+/* 헤더부분 */
+#header { height:50px; background:#ffad9f; position:fixed; width:100%; top:0; left:0;z-index:9999}
 #header .search { position:absolute; right:10%; top:25%}
 #header .search #sbox { 
     border-radius: 8px; background:#ffd7cd; border:none;
@@ -23,21 +27,99 @@ a { color:inherit; text-decoration:none}
     height:18px; width:150px;
     }
 #header .search label {position:absolute; right:3px; top:2px; color:#b6635d; font-size:14px;}
+/* nav부분 */
 
-#main { height:94.7vh; background:#6667ab;}
-#main .nav { height: 30vh;}
-#main .nav .depthcover1 { display:flex; padding-top:20px; justify-content: center;}
-#main .nav .depthcover1 img { width:25vh; transform: scaleY(-1);}
-#main .nav .depthcover2 { display:flex; padding-top:5px; justify-content: center;}
-#main .nav .depthcover2 img { width:25vh; }
-#main .nav .depth { display:flex; justify-content:space-evenly;}
-#main .nav .depth li{font-size:2vw; color:#fff; font-family: 'Lora', serif;}
+#nav { position:fixed; width:100%; top:50px; left:0; z-index:9999}
+/* #main .nav .depthcover1 { display:flex; padding-top:20px; justify-content: center;} */
+#nav .depthcover1, #nav .depthcover2 {display:block; text-align: center;}
+#nav .depthcover1 a, #nav .depthcover2 a {display:inline-block;animation:flash 3s infinite both}
+#nav .depthcover1 a:nth-child(1) img {transform:rotate(-180deg);}
+#nav .depthcover1 img { width:12vw; }
+#nav .depthcover2 img { width:12vw;}
+#nav .depth { display:flex; justify-content:space-evenly;}
+#nav .depth li{font-size:2vw; color:#fff; font-family: 'Lora', serif; width:20%; text-align: center;}
+#nav .depth li.on a { color:#ffad9f}
 
-
-#main .me { height:60%; width:70%;border:6px solid #fff;position:relative; top:0; left:50%;transform:translateX(-50%); display:flex; flex-direction: column; justify-content: space-evenly;}
-#main .me > div { padding-left:2vw;}
-#main .me h2 {color:#fff; font-size:3.5vh;font-family: 'Lora', serif;} 
-#main .me h1 {color:#ffad9f; font-size:15vh;font-family: 'Lora', serif;}
-#main .me div:nth-child(1){ display:flex; justify-content:flex-end; padding-right:3vw;}
+/* 인트로부분 */
+#intro { height:100vh; background:#6667ab; padding-top:50px; }
+#intro .me {  display:flex; flex-direction: column; justify-content: space-evenly;}
+#intro .me > div { padding-left:2vw;}
+#intro .me h2 {color:#fff; font-size:3.5vh;font-family: 'Lora', serif;} 
+#intro .me h1 {color:#ffad9f; font-size:15vh;font-family: 'Lora', serif;}
+#intro .me div:nth-child(1){ display:flex; justify-content:flex-end; padding-right:3vw;}
 /* #main .me div:nth-child(2){ display:flex;justify-content: center; align-items: center;} */
 /* #main .me div:nth-child(3){ display:flex;justify-content: end; padding-right:4vw} */
+
+
+/* 어바웃미부분 */
+#aboutme { height:100vh; background:#63B4B8; width:100%;}
+#aboutme .about {  display:flex; align-items: center; justify-content: space-evenly; }
+#aboutme .about img{ width:20%;margin:0 0; opacity:0; transform:translateX(-100%);transition: all 2s}
+#aboutme .about .depth1 li { font-family: 'Dongle', sans-serif; font-size:4vw;}
+#aboutme .about .depth1 li .depth2 li { font-size:1.5vw; text-align: center; transform:translateX(120%);transition:all 2s}
+#aboutme .about .depth1 li .depth2 li:nth-child(2n) { font-size:1vw; }
+#aboutme .about .profile{opacity:0; transition:all 2s}
+#aboutme .about .timeline{opacity:0; transition:all 4s}
+#sect2.on #aboutme .about img {opacity:1; transform:translateX(0%);}
+#sect2.on #aboutme .about .depth1 {opacity:1}
+#sect2.on #aboutme .about .depth1 li .depth2 li {transform:translateX(0%)}
+
+
+
+
+/* 스킬부분 */
+#Skills { height:100vh; background:#A9E4D7; width:100%;}
+#Skills .skill { display:flex;flex-wrap:wrap; align-content:center; }
+.tit {
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 10px
+}
+
+
+.container { 
+    /* float:left;  */
+    width:33.33%; margin-bottom:50px;
+    text-align:center; position:relative;  transform:rotateX(-180deg) translateX(-200%); opacity:0;transition:all 1.5s
+}
+.pBox { width:180px; height:180px; 
+    position:absolute; line-height:180px;
+}
+
+#sect3.on #Skills .container {transform:rotateX(0deg) translateX(0); opacity:1}
+
+
+/* 포트폴리오부분 */
+
+#portfolio { height:100vh; background:#63B4B8; width:100%;}
+#sect4 .category { font-size:20px; color:#fff; margin:20px; font-family: 'Dongle', sans-serif; letter-spacing: 0.1em; }
+#sect4 .category a { background-color:#ffad9f; padding:7px 20px; display:inline-block;  border-radius:5px; margin-right:10px }
+#sect4 .grid { display:flex; justify-content: space-evenly;flex-wrap: wrap; }
+#sect4 .grid .item { width:23%; margin:2vh 0; opacity:0; transform:translatex(-300%) rotate(-180deg);transition:all 2s}
+#sect4.on .grid .item { opacity:1; transform:translatex(0%) rotate(0)}
+/* 콘택트부분 */
+
+#contact { height:120vh; background:#6667ab; width:100%;}
+#contact .form1 { width:60%;
+	padding:30px 10px ; border:6px solid #fff;position:relative; top:30vh; left:50%; transform:translateX(-50%);}
+#contact table.contact { width:100%; }
+#contact table.contact td { padding:10px 6px }
+#contact table.contact th { padding:10px 6px; text-align:center;
+	vertical-align:middle }
+#contact table.contact th.memo,
+#contact table.contact th.info { vertical-align:top }
+
+#contact .form1 > p { text-align:center; padding:10px 0px } 
+#contact .form1 > p > button { padding:10px 20px; 
+		background:#ffad9f; color:#fff; border:none; font-family: 'Lora', serif; }
+table.contact .col1 { width:30%; }
+table.contact .col2 { width:70%; }
+
+table.contact #irum,
+table.contact #email,
+table.contact #phone,
+table.contact #memo,
+table.contact #info { width:100%; border:1px solid #000; 
+	padding:10px }
+table.contact #memo { height:10vh } 
+table.contact #info { height:13vh; overflow-y:scroll }
