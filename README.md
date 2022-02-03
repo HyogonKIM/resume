@@ -8,3 +8,5 @@ https://hyogonkim.github.io/resume/
 ver 1.1
 웹 완성
 
+22.02.03
+애니메이션 효과, 포트폴리오 클릭 시 기능 
