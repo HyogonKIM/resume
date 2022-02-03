@@ -72,31 +72,38 @@ html{overflow:hidden}
 #Skills .skill { display:flex;flex-wrap:wrap; align-content:center; }
 .tit {
     font-size: 20px;
-    margin-top: 0px;
-    margin-bottom: 10px
+    margin-bottom:20px;
 }
 
 
 .container { 
     /* float:left;  */
-    width:33.33%; margin-bottom:50px;
-    text-align:center; position:relative;  transform:rotateX(-180deg) translateX(-200%); opacity:0;transition:all 1.5s
+    width:33.33%; margin-bottom:20px;
+    text-align:center; display:none
+     /* position:relative;  transform:rotateX(-180deg) translateX(-200%); opacity:0;transition:all 1.5s */
+
 }
 .pBox { width:180px; height:180px; 
     position:absolute; line-height:180px;
 }
 
-#sect3.on #Skills .container {transform:rotateX(0deg) translateX(0); opacity:1}
+#sect3.on #Skills .container {
+    /* transform:rotateX(0deg) translateX(0); opacity:1 */
+    animation: lightSpeedInLeft 1s both; display:block}
 
 
 /* 포트폴리오부분 */
 
 #portfolio { height:100vh; background:#63B4B8; width:100%;}
 #sect4 .category { font-size:20px; color:#fff; margin:20px; font-family: 'Dongle', sans-serif; letter-spacing: 0.1em; }
-#sect4 .category a { background-color:#ffad9f; padding:7px 20px; display:inline-block;  border-radius:5px; margin-right:10px }
-#sect4 .grid { display:flex; justify-content: space-evenly;flex-wrap: wrap; }
-#sect4 .grid .item { width:23%; margin:2vh 0; opacity:0; transform:translatex(-300%) rotate(-180deg);transition:all 2s}
-#sect4.on .grid .item { opacity:1; transform:translatex(0%) rotate(0)}
+#sect4 .category  ul li { background-color:#ffad9f; padding:7px 20px; display:inline-block;  border-radius:5px; margin-right:10px }
+#sect4 .content ul { display:flex; justify-content: space-evenly;flex-wrap: wrap; opacity:1;}
+#sect4 .content ul .item{ width:23%; margin:2vh 0;display:none}
+#sect4.on .content ul.on .item {
+     /* opacity:0; transform:translatex(-300%) rotate(-180deg);transition:all 2s */
+     animation: backInLeft 1s both; display:block}
+#sect4 .category ul li.on { background-color: #b6635d;}
+/* #sect4 .content ul.on {opacity: 1;} */
 /* 콘택트부분 */
 
 #contact { height:120vh; background:#6667ab; width:100%;}

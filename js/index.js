@@ -141,4 +141,9 @@ $('#nav .depthcover2 a').on('click', function(){
     $('body, html').stop().animate({scrollTop: next}, 800)
 })
 
-
+// portfolio 페이지 메뉴 클릭 이벤트
+$('#sect4 .category ul li').on('click', function(){
+    var num = $(this).index()
+    $(this).addClass('on').siblings().removeClass('on')
+    $('#sect4 .content ul').eq(num).addClass('on').siblings().removeClass('on')
+})
