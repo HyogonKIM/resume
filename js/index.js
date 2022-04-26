@@ -94,7 +94,7 @@ $('section').on('mousewheel', function(event, delta){
 
 
 var arrChartColor = ['#e8670c', '#ff9e5a', '#ff710d', '#7f4f2d', '#cc5b0b', '#cc3a1a'];
-var arrPercent = [90, 80, 70, 60, 50]
+var arrPercent = [90, 80, 70, 50, 40]
 $('.skills').each(function(idx){
     $(this).attr({'data-percent':arrPercent[idx]})
     $(this).easyPieChart({
@@ -146,4 +146,17 @@ $('#sect4 .category ul li').on('click', function(){
     var num = $(this).index()
     $(this).addClass('on').siblings().removeClass('on')
     $('#sect4 .content ul').eq(num).addClass('on').siblings().removeClass('on')
+})
+
+// 슬릭슬라이더
+
+$('.slideInner').slick({
+    autoplay:true,
+    autoplaySpeed:3000,
+    speed:600,
+    prevArrow:'<button class="slick-arrow slick-prev"><i class="fas fa-angle-left"></i></button>',
+    nextArrow:'<button class="slick-arrow slick-next"><i class="fas fa-angle-right"></i></button>',
+    fade:false,
+    slidesToShow:1,
+    slidesToScroll:1,
 })

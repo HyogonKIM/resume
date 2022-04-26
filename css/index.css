@@ -95,14 +95,39 @@ html{overflow:hidden}
 /* 포트폴리오부분 */
 
 #portfolio { height:100vh; background:#63B4B8; width:100%;}
-#sect4 .category { font-size:20px; color:#fff; margin:20px; font-family: 'Dongle', sans-serif; letter-spacing: 0.1em; }
-#sect4 .category  ul li { background-color:#ffad9f; padding:7px 20px; display:inline-block;  border-radius:5px; margin-right:10px }
-#sect4 .content ul { display:flex; justify-content: space-evenly;flex-wrap: wrap; opacity:1;}
-#sect4 .content ul .item{ width:23%; margin:2vh 0;display:none}
-#sect4.on .content ul.on .item {
-     /* opacity:0; transform:translatex(-300%) rotate(-180deg);transition:all 2s */
-     animation: backInLeft 1s both; display:block}
-#sect4 .category ul li.on { background-color: #b6635d;}
+#portfolio .slideOuter .slick-slide{
+    height:100%;
+    display:flex;
+    position:relative;
+}
+#portfolio .slideOuter .slideInner {
+    padding:25px 0;
+}
+#portfolio .slideOuter .slick-arrow{
+    position:absolute; top:50%; transform:translateY(-50%);
+    font-size:80px; color:#ffad9f; cursor:pointer; background:none; 
+    border:none 
+}
+#portfolio .slideOuter .slick-arrow.slick-prev { left:0px; z-index:99; }
+#portfolio .slideOuter .slick-arrow.slick-next { right:0px; }
+
+#portfolio .slideOuter .slideInner .slide{
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    padding:0 20px;
+}
+#portfolio .slideOuter .slideInner .slide1 { background-image:url(../img/react-portfolio.PNG);height:500px; width:50%}
+#portfolio .slideOuter .slideInner .slide2 { background-image:url(../img/team-portfolio.PNG);height:500px; width:50%;}
+#portfolio .slideOuter .slideInner .slide3 { background-image:url(../img/node-portfolio.PNG);height:500px; width:50%;}
+
+
+#portfolio .slideOuter .slideInner .slideText { margin-left:50px; width:40%; word-break: keep-all; font-family: 'Dongle', sans-serif;}
+#portfolio .slideOuter .slideInner .slideText h1 { font-size:50px;}
+#portfolio .slideOuter .slideInner .slideText p { font-size:25px; margin:20px 0;}
+#portfolio .slideOuter .slideInner .slideText a { font-size:20px; color:#333}
+
+
 /* #sect4 .content ul.on {opacity: 1;} */
 /* 콘택트부분 */
 

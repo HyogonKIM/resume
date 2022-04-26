@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
     <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script src="./js/jquery-1.12.4.min.js"></script>
     <script src="./js/jquery.easypiechart.js"></script>
     <script src="./js/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 <body>
     <div id="header">
@@ -25,7 +27,6 @@
         <div id="nav">
             <div class="depthcover1">
                 <a href="#"><img src="./img/depthcover2.png" alt=""></a>
-                
             </div>
             <ul class="depth">
                 <li><a href="#">Intro</a></li>
@@ -108,53 +109,57 @@
                     </div>
         
                     <div class="container">
-                        <p class="tit">jQuery</p>
-                        <div class="skills photo" data-percent="60"><span class="pBox"><span class="percent"></span><span>%</span></span></div>
+                        <p class="tit">React</p>
+                        <div class="skills photo" data-percent="50"><span class="pBox"><span class="percent"></span><span>%</span></span></div>
                     </div>
+                    <div class="container">
+                        <p class="tit">Nodejs</p>
+                        <div class="skills js" data-percent="40"><span class="pBox"><span class="percent"></span><span>%</span></span></div>
+                    </div>
+                    
         
                 </div>
             </div>
         </section>
         <section id="sect4">
             <div id="portfolio">
-                <div class="result box">
-                    <div class="category">
-                        <ul>
-                            <li class="on"><a href="#none">All</a></li>
-                            <li><a href="#none">Web</a></li>                            
-                            <li><a href="#none">Mobile</a></li>
-                            <li><a href="#none">반응형</a></li>
-                        </ul>
-                    </div>
-                    <div class="content">
-                        <ul class="all on">
-                            <li class="item rwd"><a href="https://oktobat.github.io/coco220114/" title="포트폴리오 0"><img src="./img/bg1.jpg" alt="이미지1"></a></li>
-                            <li class="item react"><a href="http://www.daum.net" title="포트폴리오 1"><img src="./img/bg2.jpg" alt="이미지2"></a></li>
-                            <li class="item rwd"><a href="http://google.com" title="포트폴리오 2"><img src="./img/bg3.jpg" alt="이미지3"></a></li>
-                            <li class="item react"><a href="http://www.naver.com" title="포트폴리오 3"><img src="./img/bg4.jpg" alt="이미지4"></a></li>
-                            <li class="item rwd"><a href="http://www.daum.net" title="포트폴리오 4"><img src="./img/bg1.jpg" alt="이미지5"></a></li>
-                            <li class="item rwd"><a href="http://google.com" title="포트폴리오 5"><img src="./img/bg3.jpg" alt="이미지3"></a></li>
-                            <li class="item"></li>
-                            <li class="item"></li>
-                        </ul>
-                        <ul class="web">
-                            <li class="item rwd"><a href="http://www.daum.net" title="포트폴리오 4"><img src="./img/bg1.jpg" alt="이미지5"></a></li>
-                            <li class="item rwd"><a href="http://google.com" title="포트폴리오 5"><img src="./img/bg3.jpg" alt="이미지3"></a></li>
-                            <li class="item react"><a href="http://www.naver.com" title="포트폴리오 3"><img src="./img/bg4.jpg" alt="이미지4"></a></li>
-                            <li class="item"></li>
-                        </ul>
-                        <ul class="mobile">
-                            <li class="item rwd"><a href="http://www.daum.net" title="포트폴리오 4"><img src="./img/bg1.jpg" alt="이미지5"></a></li>
-                            <li class="item"></li>
-                            <li class="item"></li>
-                            <li class="item"></li>
-                        </ul>
-                        <ul class="uiux">
-                            <li class="item rwd"><a href="http://www.daum.net" title="포트폴리오 4"><img src="./img/bg1.jpg" alt="이미지5"></a></li>
-                            <li class="item rwd"><a href="http://google.com" title="포트폴리오 5"><img src="./img/bg3.jpg" alt="이미지3"></a></li>
-                            <li class="item"></li>
-                            <li class="item"></li>
-                        </ul>
+                <div class="slideOuter box">
+                    <div class="slideInner"> 
+                        <div class="slick-slide">
+                            <div class="slide1 slide"></div>
+                            <div class="slideText">
+                                <h1>제주도 소개 페이지</h1>
+                                <p>React와 Node.js를 기반으로 제작한 제주도 소개 홈페이지입니다.
+                                    OpenWeatherMap API를 활용해 제주도의 현재 날씨를 알아볼 수 있는 앱을 구현했으며
+                                    Board 페이지의 경우 Node.js를 활용, 카페24의 호스팅센터를 이용해 데이터베이스를 연동해
+                                    글쓰기, 게시글 불러오기가 가능하도록 만들었습니다.
+                                    이 웹사이트의 경우 미디어쿼리를 활용한 반응형 웹으로 제작되었습니다.
+                                </p>
+                                <a href="#"><자세히보기></a>
+                            </div>
+                        </div>
+                        <div class="slick-slide">
+                            <div class="slide2 slide"></div>
+                            <div class="slideText">
+                                <h1>국가별 여행경보 페이지</h1>
+                                <p>팀프로젝트를 통해 HTML, CSS를 기반으로 제작한 국가별 여행경보 알림 홈페이지입니다.
+                                    공공기관 API 데이터를 활용해 나라별, 카테고리별로 검색을 하게 되면 그 국가와 카테고리를 포함한 여행경보 정보를 불러옵니다.
+                                    서브페이지의 경우 버튼을 클릭하면 해당 정보를 불러오거나 다른 링크로 이동하도록 만들었습니다.
+                                </p>
+                                <a href="https://hyogonkim.github.io/teamproject1/"><자세히보기></a>
+                            </div>
+                        </div>
+                        <div class="slick-slide">
+                            <div class="slide3 slide"></div>
+                            <div class="slideText">
+                                <h1>맘스터치 리뉴얼 페이지</h1>
+                                <p>Nodejs를 기반으로 제작한 맘스터치 리뉴얼 페이지입니다.
+                                    Nodejs를 활용해 홈페이지를 제작했으며 로그인, 회원가입을 할 수 있고 데이터베이스를 활용해 게시판과 회원정보를 연동해 게시판에 글쓰기, 수정, 삭제를 할 수 있습니다.
+                                    또한 아이디찾기, 비밀번호 찾기가 가능하며 비밀번호 찾기의 경우 임의의 비밀번호를 생성한 뒤 본인의 메일로 비밀번호가 발송되도록 설정했습니다.
+                                </p>
+                                <a href="http://hgmomstouch.cafe24app.com/"><자세히보기></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -195,5 +200,6 @@
         </section>
     </div>
     <script src="./js/index.js"></script>
+
 </body>
 </html>
